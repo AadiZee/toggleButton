@@ -1,0 +1,25 @@
+label {
+  width: var(--toggle-width);
+  height: var(--circle-size);
+  border: 3px solid var(--toggle-border);
+  border-radius: 40px;
+  padding: 0.25em;
+  background: var(--toggle-bg);
+  cursor: pointer;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-switch {
+  height: var(--circle-size);
+  width: var(--circle-size);
+  background: var(--toggle-switch-bg);
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.toggle-input:checked ~ .toggle-switch {
+  transform: translateX(calc(var(--toggle-width) - var(--circle-size)));
+}
